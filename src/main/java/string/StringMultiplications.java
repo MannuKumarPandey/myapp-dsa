@@ -5,13 +5,13 @@ public class StringMultiplications {
 	public static void main(String[] args) {
 
 		
-		String s1 = "1243567564675678";
-		String s2 = "234";
+		String s1 = "1265446545";
+		String s2 = "1289789779";
 		
 		int length1= s1.length();
 		int length2 = s2.length();
 		
-		int res[] = new int[length1+length2];
+		int[] res = new int[length1+length2];
 		
 		int i = length2 - 1;
 		
@@ -36,7 +36,7 @@ public class StringMultiplications {
 		}
 		
 		for(int h : res) {
-			System.out.print(h+" ");
+			System.out.print(h);
 		}
 		System.out.println();
 	}
