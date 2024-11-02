@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MaxXor {
 	public static int maxXOR(int n, int m, ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
-		Trie5 trie = new Trie5();
+		Trie6 trie = new Trie6();
 		for (int i = 0; i < n; i++) {
 			trie.insert(arr1.get(i));
 		}
@@ -44,11 +44,11 @@ class Node5 {
 	}
 };
 
-class Trie5 {
+class Trie6 {
 	private static Node5 root;
 
 	// Initialize your data structure here
-	Trie5() {
+	Trie6() {
 		root = new Node5();
 	}
 

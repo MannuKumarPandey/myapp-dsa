@@ -3,7 +3,7 @@ package matrix;
 public class SetMatrixZero {
 
     public static void main(String[] args) {
-        int matrix[][] = new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        int[][] matrix = new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         setZeroes(matrix);
         for (int[] arr : matrix) {
             for (int h : arr) {
@@ -14,7 +14,7 @@ public class SetMatrixZero {
     }
 
     public static void setZeroes(int[][] matrix) {
-        int col[] = new int[1];
+        int[] col = new int[1];
         col[0] = 1;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
