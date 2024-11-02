@@ -11,7 +11,7 @@ public class SubArrayWithSumZero {
 		
 		int n = array.length;
 		int sum =0;
-		
+		// It can be solved by Sliding window approach which will do teh task in O(n)
 		for(int i = 0; i< n-1;i++) {
 			for(int j = i; j< n-1;j++) {
 				if(sum + array[j] == 0) {
