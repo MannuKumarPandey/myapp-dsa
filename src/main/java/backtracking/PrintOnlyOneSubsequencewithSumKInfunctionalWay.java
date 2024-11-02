@@ -1,4 +1,4 @@
-package recursion;
+package backtracking;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class PrintOnlyOneSubsequencewithSumKInfunctionalWay {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> al = new ArrayList<Integer>();
-		int arr[] = { 3, 1, 2 };
+		int[] arr = { 3, 1, 2 };
 		int k = 3;
 		printAllTheSubSequences(0, arr, al, k);
 	}

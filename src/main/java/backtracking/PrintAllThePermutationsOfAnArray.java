@@ -1,4 +1,4 @@
-package recursion;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ public class PrintAllThePermutationsOfAnArray {
 	// In next example space complexity optimization is also done just to take o(n)
 	// as space complexity
 	public static void main(String[] args) {
-		int array[] = { 2, 1, 3 };
+		int[] array = { 2, 1, 3 };
 		List<List<Integer>> ans = allPermutations(array);
 
 		for (List<Integer> h : ans) {
@@ -24,7 +24,7 @@ public class PrintAllThePermutationsOfAnArray {
 	private static List<List<Integer>> allPermutations(int[] array) {
 		List<List<Integer>> ans = new ArrayList<>();
 		List<Integer> ds = new ArrayList<Integer>();
-		boolean freq[] = new boolean[array.length];
+		boolean[] freq = new boolean[array.length];
 		getAllPermutations(array, ds, ans, freq);
 		return ans;
 	}

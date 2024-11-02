@@ -20,7 +20,7 @@ public class SubSetSumProblem1 {
 
 	public static void main(String[] args) {
 
-		int temp[] = { 3, 2 };
+		int[] temp = { 3, 2 };
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		for (int h : temp) {
 			arr.add(h);

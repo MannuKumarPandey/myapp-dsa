@@ -1,10 +1,8 @@
-package recursion;
+package backtracking;
 
 import java.util.ArrayList;
 
-public class PrintAnyOneSubSequencesWhoseSumIsK {
-
-	static boolean flag = false;
+public class printAllSubSequencesWhoseSumIsK {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> al = new ArrayList<Integer>();
@@ -14,17 +12,15 @@ public class PrintAnyOneSubSequencesWhoseSumIsK {
 	}
 
 	private static void printAllTheSubSequences(int i, int[] arr, ArrayList<Integer> al, int K) {
-
 		if (i == arr.length) {
 			int sum = 0;
 			for (int h : al) {
 				sum = sum + h;
 			}
-			if (sum == K && flag == false) {
+			if (sum == K) {
 				for (int h : al) {
 					System.out.print(h + " ");
 				}
-				flag = true;
 				System.out.println();
 				return;
 			}
