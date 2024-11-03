@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-class LFUCache {
+class LFUCacheDeletionOnLFUBasis {
 
     public static void main(String[] args) {
 
         // Create an LFUCache with a capacity of 2
-        LFUCache lfuCache = new LFUCache(2);
+        LFUCacheDeletionOnLFUBasis lfuCache = new LFUCacheDeletionOnLFUBasis(2);
 
         // Test 1: Put values into the cache
         lfuCache.put(1, 1); // Cache is {1=1}
@@ -55,7 +55,7 @@ class LFUCache {
     private int minFrequency; // Track the minimum frequency
     private int capacity;
 
-    public LFUCache(int capacity) {
+    public LFUCacheDeletionOnLFUBasis(int capacity) {
         this.capacity = capacity;
         this.cache = new HashMap<>();
         this.frequencyMap = new HashMap<>();
@@ -103,7 +103,8 @@ class LFUCache {
         node.frequency++;
 
         // Add to the new frequency list
-        frequencyMap.putIfAbsent(node.frequency, new PriorityQueue<>((a, b) -> a.key - b.key));
+        frequencyMap.putIfAbsent(node.frequency, new PriorityQueue<>((a, b) -> a.key - b.key)); // us frequency ka agar pahle se koi
+        //priorityqueue ka object nahi bna hai to bana lijiye.
         frequencyMap.get(node.frequency).offer(node);
 
         // If the old frequency list is empty, update minFrequency
