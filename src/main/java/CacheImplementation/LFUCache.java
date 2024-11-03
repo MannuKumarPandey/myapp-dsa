@@ -1,4 +1,4 @@
-package priorityqueue;
+package CacheImplementation;
 
 import java.util.HashMap;
 import java.util.Map;

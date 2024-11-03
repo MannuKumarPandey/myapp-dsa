@@ -1,4 +1,4 @@
-package linkedlist;
+package CacheImplementation;
 
 import java.util.HashMap;
 
