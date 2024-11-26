@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -13,14 +14,12 @@ public class BipertiteGraphBFS {
 	}
 
 	private static boolean isBipertiteGraph(ArrayList<ArrayList<Integer>> adjList, int noOfVertex) {
-		int color[] = new int[noOfVertex];
-		for (int i = 0; i < noOfVertex; i++) {
-			color[i] = -1;
-		}
+		int[] color = new int[noOfVertex];
+        Arrays.fill(color, -1);
 
 		for (int i = 0; i < noOfVertex; i++) {
 			if (color[i] == -1) {
-				if (check(i, noOfVertex, adjList, color) == false) {
+				if (!check(i, noOfVertex, adjList, color)) {
 					return false;
 				}
 			}

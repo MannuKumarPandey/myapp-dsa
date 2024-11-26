@@ -17,6 +17,7 @@ public class CustomComparator {
         for (Employee e : list) {
             System.out.println(e.toString());
         }
+
         System.out.println("---------------------------------");
 
         Collections.sort(list, new EmpSortByName());

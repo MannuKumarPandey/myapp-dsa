@@ -24,15 +24,13 @@ public class BellmanFordAlgorithm {
 		for (int i = 0; i < V; i++) {
 			System.out.print(dist[i] + " ");
 		}
-		System.out.println("");
+		System.out.println();
 	}
 
 	private static int[] bellmanFordAlgo(int V, ArrayList<ArrayList<Integer>> edges, int source) {
 
-		int dist[] = new int[V];
-		for (int i = 0; i < V; i++) {
-			dist[i] = (int) 1e9;
-		}
+		int[] dist = new int[V];
+        Arrays.fill(dist, (int) 1e9);
 
 		dist[source] = 0;
 		for (int i = 0; i < V - 1; i++) {
@@ -53,7 +51,7 @@ public class BellmanFordAlgorithm {
 			int v = it.get(1);
 			int wt = it.get(2);
 			if (dist[u] != 1e8 && dist[u] + wt < dist[v]) {
-				int temp[] = new int[1];
+				int[] temp = new int[1];
 				temp[0] = -1;
 				return temp;
 			}

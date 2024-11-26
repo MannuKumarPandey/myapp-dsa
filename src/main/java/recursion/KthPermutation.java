@@ -11,13 +11,13 @@ public class KthPermutation {
 		System.out.println("The Kth permutation sequence is " + ans);
 	}
 
-	static void swap(char s[], int i, int j) {
+	static void swap(char[] s, int i, int j) {
 		char ch = s[i];
 		s[i] = s[j];
 		s[j] = ch;
 	}
 
-	static void permutationHelper(char s[], int index, ArrayList<String> res) {
+	static void permutationHelper(char[] s, int index, ArrayList<String> res) {
 		if (index == s.length) {
 			String str = new String(s);
 			res.add(str);
@@ -31,12 +31,12 @@ public class KthPermutation {
 	}
 
 	static String getPermutation(int n, int k) {
-		String s = "";
+		StringBuilder s = new StringBuilder();
 		ArrayList<String> res = new ArrayList<>();
 		for (int i = 1; i <= n; i++) {
-			s += i;
+			s.append(i);
 		}
-		permutationHelper(s.toCharArray(), 0, res);
+		permutationHelper(s.toString().toCharArray(), 0, res);
 		Collections.sort(res);
 
 		return res.get(k);

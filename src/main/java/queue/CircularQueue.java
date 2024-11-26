@@ -20,12 +20,12 @@ class CircularQueue {
         System.out.println(a.enQueue(1));
         System.out.println(a.enQueue(2));
         System.out.println(a.enQueue(3));
-        System.out.println(a.enQueue(4));// out of memory
-        System.out.println(a.Rear());
+        System.out.println(a.enQueue(4));
+        System.out.println(a.rear);
         System.out.println(a.isFull());
         System.out.println(a.deQueue());
         System.out.println(a.enQueue(4));
-        System.out.println(a.Rear());
+        System.out.println(a.rear);
 
     }
 

@@ -36,16 +36,16 @@ public class AlienDictionary {
 			}
 		}
 		List<Integer> topo = topo(K, adjList);
-		String ans = "";
+		StringBuilder ans = new StringBuilder();
 		for (int curNode : topo) {
-			ans = ans + (char) (curNode + (int) 'a');
+			ans.append((char) (curNode + (int) 'a'));
 		}
-		return ans;
+		return ans.toString();
 	}
 
 	private static List<Integer> topo(int noOfVertices, ArrayList<ArrayList<Integer>> adjList) {
 		// indegree array bnaiye
-		int inDegree[] = new int[noOfVertices];
+		int[] inDegree = new int[noOfVertices];
 		for (int i = 0; i < noOfVertices; i++) {
 			for (int curNode : adjList.get(i)) {
 				inDegree[curNode]++;

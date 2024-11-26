@@ -7,10 +7,8 @@ public class MColoringGraphProblem {
 	public static boolean graphColoring(List<Integer>[] G, int[] color, int i, int C) {
 		// Your code here
 		int n = G.length;
-		if (solve(i, G, color, n, C) == true)
-			return true;
-		return false;
-	}
+        return solve(i, G, color, n, C);
+    }
 
 	private static boolean isSafe(int node, List<Integer>[] G, int[] color, int n, int col) {
 		for (int it : G[node]) {
@@ -32,7 +30,7 @@ public class MColoringGraphProblem {
 			// call isSafe() method to know is it safe to color that node with i color
 			if (isSafe(node, G, color, n, i)) {
 				color[node] = i;
-				if (solve(node + 1, G, color, n, m) == true)
+				if (solve(node + 1, G, color, n, m))
 					// if we get any true as result then no need to call recursion further
 					return true;
 				color[node] = 0;
@@ -61,7 +59,7 @@ public class MColoringGraphProblem {
 		G[2].add(0);
 		int[] color = new int[N]; // maintaining the color array for their indexes
 		boolean ans = graphColoring(G, color, 0, M);
-		if (ans == true)
+		if (ans)
 			System.out.println("1");
 		else
 			System.out.println("0");

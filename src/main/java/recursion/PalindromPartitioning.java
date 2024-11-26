@@ -38,7 +38,6 @@ public class PalindromPartitioning {
 				path.remove(path.size() - 1);
 			}
 		}
-
 	}
 
 	private static boolean isPalindrome(String s, int start, int end) {
@@ -49,5 +48,4 @@ public class PalindromPartitioning {
 		}
 		return true;
 	}
-
 }

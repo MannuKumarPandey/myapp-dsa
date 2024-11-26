@@ -51,7 +51,7 @@ public class MergeSortByRecursion {
 
 	public static void main(String[] args) {
 		int n = 7;
-		int arr[] = { 9, 4, 7, 6, 3, 1, 5 };
+		int[] arr = { 9, 4, 7, 6, 3, 1, 5 };
 		System.out.println("Before sorting array: ");
 		for (int i = 0; i < n; i++) {
 			System.out.print(arr[i] + " ");
