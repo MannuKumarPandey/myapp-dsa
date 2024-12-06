@@ -7,26 +7,28 @@ public class SearchInRotatedSortedArray {
     }
 
     public static int search(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
+        int start = 0;
+        int end = nums.length - 1;
 
-        while (low <= high) {
-            int mid = (low + high) / 2;
-
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
                 return mid;
             }
 
-            if (nums[low] <= nums[mid]) {
-                if (nums[low] <= target && target < nums[mid]) {
-                    high = mid - 1;
-                } else {
-                    low = mid + 1;
+            //matlab left part sorted hai
+            if (nums[start] <= nums[mid]) {
+                // matlab isi half me value hai
+                if (nums[start] <= target && nums[mid] > target) {
+                    end = mid - 1;
+                } else {// varna isme values nahi hai to aage jaye
+                    start = mid + 1;
                 }
-            } else {
-                if (nums[mid] < target && target <= nums[high]) {
-                    low = mid + 1;
+            } else {//matlab right half sorted hai
+                if (nums[mid] < target && target <= nums[end]) {//iska matlab target isi me hai
+                    start = mid + 1;
                 } else {
-                    high = mid - 1;
+                    end = mid - 1;
                 }
             }
         }
