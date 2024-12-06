@@ -19,9 +19,9 @@ public class PriorityQueueLRUNature {
         System.out.println("-------------------------");
 
         pq.remove();
-        //Means Priority Queue stores the deletion duplicate elements as well.
-        // In case of deletion of teh element which has duplicate values stored in priority
-        // queue , It will delete the latest entry of teh same value.
+        /*Means Priority Queue stores the deletion duplicate elements as well.
+         In case of deletion of teh element which has duplicate values stored in priority
+         queue , It will delete the latest entry of teh same value.*/
         for(int i: pq){
             System.out.println(i);
         }
