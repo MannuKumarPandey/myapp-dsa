@@ -40,6 +40,7 @@ public class L85OptimizedMaxRectangleArea {
         return maxArea;
     }
 
+
     // Function to calculate the largest rectangle in a histogram
     private static int largestRectangleInHistogram(int[] heights) {
         int n = heights.length;

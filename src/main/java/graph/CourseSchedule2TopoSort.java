@@ -10,7 +10,7 @@ public class CourseSchedule2TopoSort {
 		int noOfVertices = 4;
 		int[][] pairs = { { 1, 2 }, { 4, 3 }, { 2, 4 } };
 
-		int array[] = isPossible(pairs, noOfVertices);
+		int[] array = isPossible(pairs, noOfVertices);
 		for (int i = 1; i <= noOfVertices; i++) {
 			System.out.print(array[i] + " ");
 		}

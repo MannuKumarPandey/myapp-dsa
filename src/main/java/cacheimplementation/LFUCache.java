@@ -1,4 +1,4 @@
-package CacheImplementation;
+package cacheimplementation;
 
 import java.util.HashMap;
 import java.util.Map;

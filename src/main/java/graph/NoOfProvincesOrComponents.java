@@ -14,7 +14,7 @@ public class NoOfProvincesOrComponents {
 
 		int counter = 0;
 		for (int i = 1; i <= n; i++) { // since given graph was 1 biased so starting from 1
-			if (vis[i] == false) {
+			if (!vis[i]) {
 				vis = dfs(adjList, i, vis);
 				counter++;
 			}
