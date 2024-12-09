@@ -3,13 +3,11 @@ package DSA200HARD;
 public class LC123BuySell3 {
 
 
-
+    static int[][][] dp;
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{3, 3, 5, 0, 0, 3, 1, 4}));
     }
-
-    static int[][][] dp;
 
     public static int maxProfit(int[] prices) {
 
@@ -51,4 +49,5 @@ public class LC123BuySell3 {
             return dp[index][buy][cap] = Math.max(prices[index] + solve(index + 1, 1, prices, cap - 1), solve(index + 1, 0, prices, cap));
         }
     }
+
 }

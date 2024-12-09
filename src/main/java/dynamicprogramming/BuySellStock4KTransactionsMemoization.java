@@ -4,18 +4,18 @@ import java.util.Arrays;
 
 public class BuySellStock4KTransactionsMemoization {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
-		int Arr[] = { 7, 1, 5, 3, 6, 44, 5, 13 };
+		int[] Arr = { 7, 1, 5, 3, 6, 44, 5, 13 };
 		int n = Arr.length;
 		System.out.println("The maximum profit that can be generated is " + getMaximumProfit(Arr, n));
 	}
 
-	static int getMaximumProfit(int price[], int n) {
+	static int getMaximumProfit(int[] price, int n) {
 		int cap = 3; // K transactions are allowed
-		int dp[][][] = new int[n][2][cap + 1];
-		for (int g[][] : dp) {
-			for (int h[] : g) {
+		int[][][] dp = new int[n][2][cap + 1];
+		for (int[][] g : dp) {
+			for (int[] h : g) {
 				Arrays.fill(h, -1);
 			}
 
