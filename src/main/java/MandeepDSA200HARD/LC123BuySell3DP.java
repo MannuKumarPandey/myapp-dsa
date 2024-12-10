@@ -1,6 +1,6 @@
-package DSA200HARD;
+package MandeepDSA200HARD;
 
-public class LC123BuySell3 {
+public class LC123BuySell3DP {
 
 
     static int[][][] dp;

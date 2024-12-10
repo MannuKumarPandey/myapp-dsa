@@ -1,4 +1,4 @@
-package DSA200HARD;
+package MandeepDSA200HARD;
 
 import java.util.ArrayList;
 import java.util.Collections;

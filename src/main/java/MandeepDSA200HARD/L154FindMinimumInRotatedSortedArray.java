@@ -1,4 +1,4 @@
-package DSA200HARD;
+package MandeepDSA200HARD;
 
 public class L154FindMinimumInRotatedSortedArray {
 

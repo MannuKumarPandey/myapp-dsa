@@ -1,4 +1,4 @@
-package DSA200HARD;
+package MandeepDSA200HARD;
 
 public class L84BruteForceLargestRectangleinHistogram {
     public static void main(String[] args) {
