@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LC315CountOfSmallerNumberAfterSelf {
+public class LC315CountOfSmallerNumberAfterSelfBruteForce {
 
     public static void main(String[] args) {
         System.out.println(countSmaller(new int[]{5, 2, 6, 1}).toString());
@@ -22,7 +22,7 @@ public class LC315CountOfSmallerNumberAfterSelf {
 
 
         for (int i = 0; i < len; i++) {
-            int index = binarySearch(inputArrayList, nums[i]);
+            int index = binarySearch(inputArrayList, nums[i]);//log n
             result.add(index);
             inputArrayList.remove(index);
         }

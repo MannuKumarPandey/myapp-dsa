@@ -2,7 +2,7 @@ package MandeepDSA200HARD;
 
 import java.util.HashSet;
 
-public class L41FirstMissingPositive {
+public class LC41FirstMissingPositive {
     public static void main(String[] args) {
         System.out.println(firstMissingPositive(new int[]{1, 2, 0}));
         System.out.println(firstMissingPositive(new int[]{3, 4, -1, 1}));

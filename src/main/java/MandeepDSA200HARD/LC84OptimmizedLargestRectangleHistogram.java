@@ -2,7 +2,7 @@ package MandeepDSA200HARD;
 
 import java.util.Stack;
 
-public class L84OptimmizedLargestRectangleHistogram {
+public class LC84OptimmizedLargestRectangleHistogram {
 
     public static void main(String[] args) {
         System.out.println(largestRectangleArea(new int[]{2, 1, 5, 6, 2, 3}));

@@ -1,6 +1,6 @@
 package MandeepDSA200HARD;
 
-public class L154FindMinimumInRotatedSortedArray {
+public class LC154FindMinimumInRotatedSortedArray {
 
     public static void main(String[] args) {
         System.out.println(findMin(new int[]{2, 2, 2, 0, 1}));

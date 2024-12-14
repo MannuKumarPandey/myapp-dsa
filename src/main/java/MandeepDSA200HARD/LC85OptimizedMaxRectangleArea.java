@@ -2,7 +2,7 @@ package MandeepDSA200HARD;
 
 import java.util.Stack;
 
-public class L85OptimizedMaxRectangleArea {
+public class LC85OptimizedMaxRectangleArea {
 
     public static void main(String[] args) {
         // It is very similar question that max rectangle histogram problem

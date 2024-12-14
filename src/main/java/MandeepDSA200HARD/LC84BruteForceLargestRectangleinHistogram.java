@@ -1,6 +1,6 @@
 package MandeepDSA200HARD;
 
-public class L84BruteForceLargestRectangleinHistogram {
+public class LC84BruteForceLargestRectangleinHistogram {
     public static void main(String[] args) {
         System.out.println(largestRectangleHistogramBruteForce(new int[]{2, 1, 5, 6, 2, 3}));
         System.out.println(largestRectangleHistogramBruteForce(new int[]{2, 4}));
