@@ -13,8 +13,10 @@ class TrappingRainWaterProblem2 {
             return 0;
         }
 
+
         int m = heightMap.length;
         int n = heightMap[0].length;
+
         //Preparing minHeap on basis of height
         PriorityQueue<Cell> minHeap = new PriorityQueue<>((a, b) -> a.height - b.height);
         boolean[][] visited = new boolean[m][n];
