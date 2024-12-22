@@ -21,7 +21,7 @@ public class MinValueInBST {
 	}
 
 	public static void main(String[] args) {
-		int array[] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		Node head = createBinaryTree(array, 0, array.length - 1);
 		levelOrderTraversal(head);
 		System.out.println();
@@ -47,7 +47,7 @@ public class MinValueInBST {
 		if (head != null) {
 			queue.add(head);
 		}
-		while (queue.isEmpty() == false) {
+		while (!queue.isEmpty()) {
 			temp = queue.remove();
 			System.out.print(temp.data + " ");
 
@@ -61,7 +61,7 @@ public class MinValueInBST {
 		}
 	}
 
-	public static Node createBinaryTree(int array[], int start, int end) {
+	public static Node createBinaryTree(int[] array, int start, int end) {
 
 		if (start > end) {
 			return null;
