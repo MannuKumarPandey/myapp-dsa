@@ -21,7 +21,7 @@ public class LevelOrderTraversal {
 	}
 
 	public static void main(String[] args) {
-		int array[] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		Node head = createCompleteBinaryTree(array, 0);
 		levelOrderTraversal(head);
 	}
@@ -32,7 +32,7 @@ public class LevelOrderTraversal {
 		if (head != null) {
 			queue.add(head);
 		}
-		while (queue.isEmpty() == false) {
+		while (!queue.isEmpty()) {
 			temp = queue.remove();
 			System.out.print(temp.data + " ");
 
