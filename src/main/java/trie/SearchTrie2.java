@@ -17,7 +17,7 @@ public class SearchTrie2 {
     }
 
     public static boolean wordBreak(String s, List<String> wordDict) {
-        Trie t = new Trie();
+        TrieImplementationAdvancedTrieNode t = new TrieImplementationAdvancedTrieNode();
         for (String curS : wordDict) {
             t.insert(curS);
         }
