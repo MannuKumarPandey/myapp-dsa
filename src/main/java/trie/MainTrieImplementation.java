@@ -2,7 +2,7 @@ package trie;
 
 public class MainTrieImplementation {
     public static void main(String[] args) {
-        Trie5 t1 = new Trie5();
+        TrieNode t1 = new TrieNode();
 
         t1.insert("abc");
         t1.insert("b");
@@ -37,17 +37,17 @@ public class MainTrieImplementation {
 
 }
 
-class Trie5 {
-    Trie5[] tries; //actul starting point hia tries ke isi object se
+class TrieNode {
+    TrieNode[] tries; //actul starting point hia tries ke isi object se
     boolean endStatus;
 
-    public Trie5() {
-        tries = new Trie5[26];
+    public TrieNode() {
+        tries = new TrieNode[26];
         endStatus = false;
     }
 
     public void insert(String word) {
-        Trie5 temp = this;
+        TrieNode temp = this;
         // same class ke object ko refer karne ke liye
         //temporary helper bana rahe hai jo hame
         int wordLength = word.length();
@@ -55,7 +55,7 @@ class Trie5 {
         for (int i = 0; i < wordLength; i++) {
             int index = word.charAt(i) - 'a';
             if (temp.tries[index] == null) {
-                temp.tries[index] = new Trie5();
+                temp.tries[index] = new TrieNode();
                 // ham sirf object isliye bana rahe hai ki hamara wo index null na rahe
                 // jo index null nahi hai aur wo TrieNode ka object rakhahai matlab wha wo character thi string me
             }
@@ -67,7 +67,7 @@ class Trie5 {
     }
 
     public boolean search(String word) {
-        Trie5 temp = this;
+        TrieNode temp = this;
         int wordLength = word.length();
 
         for (int i = 0; i < wordLength; i++) {
@@ -85,7 +85,7 @@ class Trie5 {
     }
 
     public boolean startsWith(String prefix) {
-        Trie5 temp = this;
+        TrieNode temp = this;
 
         int wordLength = prefix.length();
 
