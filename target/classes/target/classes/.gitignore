@@ -7,13 +7,5 @@
 target/
 pom.xml
 
-# Ignore all files except *.class in the src directory
-src/**
-!src/**/*.class
 
-# MacOS specific files
-.DS_Store
-
-# Windows specific files
-Thumbs.db
 

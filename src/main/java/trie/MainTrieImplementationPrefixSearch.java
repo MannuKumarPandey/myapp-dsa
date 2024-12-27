@@ -1,6 +1,6 @@
 package trie;
 
-public class MainTrieImplementation {
+public class MainTrieImplementationPrefixSearch {
     public static void main(String[] args) {
         TrieNode t1 = new TrieNode();
 
@@ -32,7 +32,8 @@ public class MainTrieImplementation {
         t1.insert("z");
 
         System.out.println(t1);
-        System.out.println(t1.search("x"));
+        System.out.println(t1.wordSearch("x"));
+        System.out.println(t1.prefixSearch("t"));
     }
 
 }
@@ -66,7 +67,7 @@ class TrieNode {
         temp.endStatus = true;
     }
 
-    public boolean search(String word) {
+    public boolean wordSearch(String word) {
         TrieNode temp = this;
         int wordLength = word.length();
 
@@ -76,15 +77,13 @@ class TrieNode {
             if (tries[index] == null) {
                 return false;
             }
-
             temp = temp.tries[index];
         }
-
         return temp.endStatus;
 
     }
 
-    public boolean startsWith(String prefix) {
+    public boolean prefixSearch(String prefix) {
         TrieNode temp = this;
 
         int wordLength = prefix.length();
@@ -95,30 +94,52 @@ class TrieNode {
             if (tries[index] == null) {
                 return false;
             }
-
             temp = temp.tries[index];
         }
         return true;
     }
-}
 
-
-
-/*
-class Test{
-    public static void main(String[] args) {
-        Mandeep m = new Mandeep();
-
+    public boolean delete(String word) {
+        return deleteHelper(this, word, 0);
     }
 
-   public static  class Mandeep{
-        String name;
-        int age;
-        int[] arr = new int[26];
+    private boolean deleteHelper(TrieNode node, String word, int depth) {
+        if (node == null) {
+            return false;
+        }
+
+        // If last character of the word is reached
+        if (depth == word.length()) {
+            // This node is no longer the end of a word
+            if (node.endStatus) {
+                node.endStatus = false;
+            }
+            // If the node has no children, it can be deleted
+            return node.isEmpty();
+        }
+
+        int index = word.charAt(depth) - 'a';
+        if (deleteHelper(node.tries[index], word, depth + 1)) {
+            // Delete the child node if it is empty
+            node.tries[index] = null;
+
+            // Return true if the current node is not the end of another word and has no children
+            return !node.endStatus && node.isEmpty();
+        }
+
+        return false;
+    }
+
+    public boolean isEmpty() {
+        //checking for all teh indexes , is there any index which is having the object of Trie Node or not
+        for (int i = 0; i < 26; i++) {
+            if (tries[i] != null) {
+                return false;
+            }
+        }
+        return true;
     }
 }
-*/
-
 
 
 
