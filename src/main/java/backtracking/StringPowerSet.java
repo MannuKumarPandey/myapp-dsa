@@ -21,26 +21,22 @@ public class StringPowerSet {
         return ans;
     }
 
-    public static void subsetHelper(String s, int start, List<List<String>> ans, List<String> tempAns) {
+    public static void subsetHelper(String s, int i, List<List<String>> ans, List<String> tempAns) {
 
         // what is missing here ? why I am not able to get the other combinations ?
 
 
-        if (start == s.length()) {
+        if (i == s.length()) {
             ans.add(new ArrayList<>(tempAns));
             return;
         }
 
 
         // If we Include the current element
-
-        for (int i = start; i < s.length(); i++) {
             tempAns.add(Character.toString(s.charAt(i)));
             subsetHelper(s, i + 1, ans, tempAns);
             tempAns.remove(tempAns.size() - 1); // Backtrack
-
-        }
-
+            subsetHelper(s, i + 1, ans, tempAns);//piche jane ki jarurat nahi hai yha
     }
 }
 

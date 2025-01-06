@@ -58,7 +58,7 @@ public class NQueensProblem {
 			if (validate(board, row, column)) {
 				board[row][column] = 'Q';
 				dfs(column + 1, board, res);
-				board[row][column] = '.';
+				board[row][column] = '.';//back track
 			}
 		}
 

@@ -1,0 +1,16 @@
+1) When we need all possible permutations of the given input, so it does not mean that which ever
+index we have accessed, is the left boundry index.
+we still need to traverse frm 0 till last index .
+use for loop with 0 to len -1 as driver call and then do recursive.(Iteration along with recursion)
+but we can also use only recursion calls as well, just we need to take care of the recursive Driver call.
+
+
+2) When we need all possible subsets/subsequences of the given input,
+So it is not required to traverse back from the index which we have reached so far.
+In that case ,
+better approach will be
+a) call recursion with including the input
+b) remove the included part
+c) again do the recursive call.
+
+

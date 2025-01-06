@@ -11,12 +11,12 @@ public class AllPermutationsOfAnArrayUsingOneLoopAndOneRecursonCAll {
 
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> tempRes = new ArrayList<>();
-        util(result, tempRes, arr, 0);
+        util(result, tempRes, arr);
         System.out.println(result.size());
         System.out.println(result.toString());
     }
 
-    public static void util(List<List<Integer>> result, List<Integer> tempRes, int[] arr, int index) {
+    public static void util(List<List<Integer>> result, List<Integer> tempRes, int[] arr) {
 
         if (tempRes.size() == arr.length) {
             result.add(new ArrayList<>(tempRes));
@@ -26,7 +26,7 @@ public class AllPermutationsOfAnArrayUsingOneLoopAndOneRecursonCAll {
         for (int i = 0; i < arr.length; i++) {
             if (!tempRes.contains(arr[i])) {
                 tempRes.add(arr[i]);
-                util(result, tempRes, arr, i + 1);
+                util(result, tempRes, arr);
                 tempRes.remove(tempRes.size() - 1); // Backtrack
             }
         }

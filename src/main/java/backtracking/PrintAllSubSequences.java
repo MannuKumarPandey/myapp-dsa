@@ -18,13 +18,14 @@ public class PrintAllSubSequences {
 			System.out.println();
 			return;
 		}
+
 		al.add(arr[i]);
 		printAllTheSubSequences(i + 1, arr, al);
 		// ek ek integer ko remove kar karke fir se newly take or not take kind of
 		// case me badhate chale wo automatic sare sequences ko print kar dega.
 
 		al.remove(Integer.valueOf(arr[i]));
-		printAllTheSubSequences(i + 1, arr, al);
+		printAllTheSubSequences(i + 1, arr, al);//piche jane ki jarurat nahi hai yha
 
 	}
 }
