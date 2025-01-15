@@ -1,13 +1,15 @@
-package MandeepDSA200HARD;
+package MandeepDSA200Medium;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
-public class LC85OptimizedMaxRectangleArea {
+public class LC221MaxSquareArea {
 
     public static void main(String[] args) {
         // It is very similar question that max rectangle histogram problem
         //System.out.println(maxRectangleHistogram(new char[][]{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}}));
-       // System.out.println(maxRectangleHistogram(new char[][]{{'1', '0'}, {'0', '1'}}));
+        // System.out.println(maxRectangleHistogram(new char[][]{{'1', '0'}, {'0', '1'}}));
         System.out.println(maxRectangleHistogram(new char[][]{{'1', '1', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'0', '0', '0', '0', '0'},
                 {'1', '1', '1', '1', '1'}, {'1', '1', '1', '1', '1'}}));
     }
@@ -83,14 +85,14 @@ public class LC85OptimizedMaxRectangleArea {
             stack.push(i);
         }
 
-        // Calculate the maximum area using PSE and NSE
-        int maxArea = 0;
+        // Calculate the largest square
+        int maxSquareArea = 0;
         for (int i = 0; i < n; i++) {
-            int width = nse[i] - pse[i] - 1;
-            maxArea = Math.max(maxArea, heights[i] * width);
+            int width = nse[i] - pse[i] - 1; // Width of the rectangle
+            int side = Math.min(width, heights[i]); // Square side length
+            maxSquareArea = Math.max(maxSquareArea, side * side); // Update max square area
         }
 
-        return maxArea;
+        return maxSquareArea;
     }
-
 }
