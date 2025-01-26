@@ -33,13 +33,13 @@ public class AVLTree {
     // Right rotate subtree rooted with y
     private Node rightRotate(Node y) {
         Node x = y.left;
-        Node T2 = x.right;
+        Node backupSubTrees = x.right;
 
-        // Perform rotation
+        // yha rotation ho rahi hai
         x.right = y;
-        y.left = T2;
+        y.left = backupSubTrees;
 
-        // Update heights
+        // y and x dono nodes ki heights ko update kar rahe hai
         y.height = Math.max(height(y.left), height(y.right)) + 1;
         x.height = Math.max(height(x.left), height(x.right)) + 1;
 
@@ -50,13 +50,13 @@ public class AVLTree {
     // Left rotate subtree rooted with x
     private Node leftRotate(Node x) {
         Node y = x.right;
-        Node T2 = y.left;
+        Node backupSubTrees = y.left;
 
-        // Perform rotation
+        // yha rotation ho rahi hai
         y.left = x;
-        x.right = T2;
+        x.right = backupSubTrees;
 
-        // Update heights
+        // y and x dono nodes ki heights ko update kar rahe hai
         x.height = Math.max(height(x.left), height(x.right)) + 1;
         y.height = Math.max(height(y.left), height(y.right)) + 1;
 
@@ -70,7 +70,7 @@ public class AVLTree {
     }
 
     private Node insert(Node node, int key) {
-        // Perform the normal BST insertion
+        //Step 1)  Perform the normal BST insertion
         if (node == null) {
             return new Node(key);
         }
@@ -84,31 +84,33 @@ public class AVLTree {
             return node;
         }
 
-        // Update the height of this ancestor node
+        //step 2)  Update the height of this ancestor node
         node.height = 1 + Math.max(height(node.left), height(node.right));
 
-        // Get the balance factor
+        // Step 3) Get the balance factor
         int balance = getBalanceFactor(node);
 
-        // If the node becomes unbalanced, there are 4 cases:
+        //step 4) If the node becomes unbalanced, there are 4 cases:
 
-        // Left Left Case
+        // Left Left Case---Means Tree Left Left heavy hai --> means right side rotate karna padega
         if (balance > 1 && key < node.left.key) {
             return rightRotate(node);
         }
 
-        // Right Right Case
+        // Right Right Case------Means Tree Right Right heavy hai --> means Left side rotate karna padega
         if (balance < -1 && key > node.right.key) {
             return leftRotate(node);
         }
 
-        // Left Right Case
+        // Left Right Case---> Left Right case two steps ke rotations ka  steps hai.
+        // pahle right rotation karne ke bad fir left rotation karenge
         if (balance > 1 && key > node.left.key) {
             node.left = leftRotate(node.left);
             return rightRotate(node);
         }
 
-        // Right Left Case
+        // Right Left Case---> Right Left case two steps ke rotations ka  steps hai.
+        // pahle left rotation karne ke bad fir right rotation karenge
         if (balance < -1 && key < node.right.key) {
             node.right = rightRotate(node.right);
             return leftRotate(node);
