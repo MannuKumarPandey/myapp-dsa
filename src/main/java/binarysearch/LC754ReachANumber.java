@@ -8,7 +8,7 @@ public class LC754ReachANumber {
 
 
     public static int reachNumber(int target) {
-        target = Math.abs(target); // Work with positive target
+        target = Math.abs(target);
         int sum = 0;
         int steps = 0;
 

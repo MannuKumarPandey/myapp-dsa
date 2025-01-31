@@ -2,7 +2,8 @@ package stack;
 
 import java.util.Stack;
 
-public class MonotonicIncreasingStack {
+public class MonotonicDecreasingStack {
+
     static Stack<Integer> os = new Stack<>();
     static Stack<Integer> ms = new Stack<>();
 
@@ -31,7 +32,7 @@ public class MonotonicIncreasingStack {
     public static void add(int data) {
         os.push(data);
         if (!ms.isEmpty()) {
-            ms.push(Math.max(ms.peek(), data));
+            ms.push(Math.min(ms.peek(), data));
         } else {
             ms.push(data);
         }
