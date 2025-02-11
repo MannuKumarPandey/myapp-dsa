@@ -1,4 +1,6 @@
-class LC3229 {
+package MandeepDSA200HARD;
+
+class LC3229MinimumOperations {
 
     public static void main(String[] args) {
         System.out.println(minimumOperations(new int[]{3, 5, 1, 2}, new int[]{4, 6, 2, 4}));
