@@ -6,6 +6,8 @@ public class HashSetTest {
 
     public static void main(String[] args) {
 
+        System.out.println(hash(Integer.valueOf(8)));
+
         //Randomized data structures
         //not maintaining insertion order
         //not maintaining the sorted manner
@@ -24,5 +26,11 @@ public class HashSetTest {
         System.out.println(hs.contains(20));//O(1)
         hs.remove(20);//O(1)
         System.out.println(hs.toString());
+    }
+
+    static final int hash(Object key) {
+        int h = key.hashCode();
+        int p = (h >>> 16);
+        return h ^ p;
     }
 }

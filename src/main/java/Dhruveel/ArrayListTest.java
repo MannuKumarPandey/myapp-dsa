@@ -2,6 +2,7 @@ package Dhruveel;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class ArrayListTest {
 
@@ -10,6 +11,11 @@ public class ArrayListTest {
         //duplicate elements will be added
         //internally stores the elements on basis of dynamic array
         ArrayList<Integer> arlist = new ArrayList<>();
+
+        //Object creation of arrayList using List
+        //ArrayList -> implementation Class of List Interface
+        List<Integer> arlist2 = new ArrayList<>();
+
         arlist.add(10);
         arlist.add(20);
         arlist.add(100);
