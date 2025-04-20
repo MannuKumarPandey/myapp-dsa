@@ -1,3 +1,5 @@
+package viveksingh;
+
 public class FreqArrayOfString1 {
     public static void main(String[] args) {
         String s1 ="aviveksingh";

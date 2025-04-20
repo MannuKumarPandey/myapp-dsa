@@ -1,3 +1,5 @@
+package viveksingh;
+
 public class CharacterOPerations {
 
     public static void main(String[] args) {
