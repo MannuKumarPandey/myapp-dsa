@@ -6,7 +6,7 @@ public class Anagram2 {
 
     public static void main(String[] args) {
         String s1 = "abcdef";
-        String s2 = "deabcf";
+        String s2 = "xyzzzz";
 
         char[] arr1 = s1.toCharArray();
         char[] arr2 = s2.toCharArray();
