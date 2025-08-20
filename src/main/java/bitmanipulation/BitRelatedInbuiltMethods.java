@@ -1,6 +1,6 @@
 package bitmanipulation;
 
-public class InbuiltMethodsToCountBits {
+public class BitRelatedInbuiltMethods {
 
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Dhruveel;
+package arrays;
 
 import java.util.Arrays;
 

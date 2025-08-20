@@ -1,4 +1,4 @@
-package jeet;
+package arrays;
 
 import java.util.Arrays;
 

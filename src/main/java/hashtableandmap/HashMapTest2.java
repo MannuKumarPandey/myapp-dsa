@@ -1,4 +1,4 @@
-package Dhruveel;
+package hashtableandmap;
 
 import java.util.HashMap;
 import java.util.Map;

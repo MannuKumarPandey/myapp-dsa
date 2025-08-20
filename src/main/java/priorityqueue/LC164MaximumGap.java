@@ -1,4 +1,4 @@
-package jeet;
+package priorityqueue;
 
 import java.util.PriorityQueue;
 

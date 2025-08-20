@@ -1,6 +1,4 @@
-package Dhruveel;
-
-import java.util.Arrays;
+package arrays;
 
 public class LC1636 {
 

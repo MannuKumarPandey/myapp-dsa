@@ -1,4 +1,4 @@
-package jeet;
+package binarysearch;
 
 public class BinarySearchOnRotatedSortedArray {
 

@@ -1,4 +1,4 @@
-package Dhruveel;
+package slidingwindow;
 
 public class MaxWindowSum {
     public static void main(String[] args) {
