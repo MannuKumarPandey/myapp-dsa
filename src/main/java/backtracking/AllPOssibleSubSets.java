@@ -16,18 +16,17 @@ class AllPOssibleSubSets {
     }
 
     public static void subsetHelper(int[] nums, int start, List<List<Integer>> ans, List<Integer> tempAns) {
-        if (start == nums.length) {
+
             ans.add(new ArrayList<>(tempAns)); // Add a copy of tempAns to final Ans. if we directly add then all
-            // entries values will be same.
-            return;
-        }
 
-        for (int i = start; i < nums.length; i++) {
+
+        //combination of Iteration plus Recursive
+        for (int i = start; i < nums.length; i++) {  //loop
             // If we Include the current element
-            tempAns.add(nums[i]);
-            subsetHelper(nums, i + 1, ans, tempAns);
+            tempAns.add(nums[i]); //data ka temporary add hona
+            subsetHelper(nums, i + 1, ans, tempAns);//loop
 
-            tempAns.remove(tempAns.size() - 1); // Backtrack
+            tempAns.remove(tempAns.size() - 1); // Backtrack added daqta ka hatana
         }
 
     }
