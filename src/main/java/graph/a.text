@@ -1,0 +1,54 @@
+=====================================
+1) SPA---> Shortest Path Algorithms
+===================================
+SPADijkstrasOneSourceToAllNodes
+SPABellmanFordSingleSourceToAllNodes
+SPAFloydWarshallAllNodestoAllNodes
+SPAAStarSearchOneSourceOneDestination
+SPAJohnsonAllNodesToAllNodes
+
+
+===================================
+2) MST---> Minimum Spanning Tree
+====================================
+MSTKruskal
+MSTPrims
+
+
+=========================================
+3) SCC---> Strongly Connected Components
+==========================================
+SCCKosaraju
+SCCTarjans
+
+=======================================
+4) Articulation Points & Bridges
+======================================
+ArticulationPointsBridgesTarjansAlgo
+
+
+
+================================
+5) TS----> Topological Sort
+===============================
+TSKahnsAlgorithm
+TSDFS
+
+
+=================================
+6) CD---> Cycle Detection
+===================================
+CDUnionFind
+CDDFSRecursion
+
+
+===============================
+7) Travelling Algorithms
+================================
+TraversingAlgoBFS
+TraversingAlgoDFS
+
+
+
+
+
