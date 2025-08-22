@@ -30,13 +30,13 @@ Tarjan's Algorithm for Articulation Points & Bridges
 */
 
 
-public class ArticulationPointsBridgesTarjansAlgo {
+public class A12ArticulationPointsBridgesTarjansAlgo {
 
     private int V;
     private List<List<Integer>> adjList;
     private int time;
 
-    public ArticulationPointsBridgesTarjansAlgo(int V) {
+    public A12ArticulationPointsBridgesTarjansAlgo(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
@@ -44,7 +44,7 @@ public class ArticulationPointsBridgesTarjansAlgo {
     }
 
     public static void main(String[] args) {
-        ArticulationPointsBridgesTarjansAlgo g = new ArticulationPointsBridgesTarjansAlgo(5);
+        A12ArticulationPointsBridgesTarjansAlgo g = new A12ArticulationPointsBridgesTarjansAlgo(5);
 
         g.addEdge(0, 1);
         g.addEdge(0, 2);

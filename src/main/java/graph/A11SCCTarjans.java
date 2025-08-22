@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class SCCTarjans {
+public class A11SCCTarjans {
 
     private int V; // number of vertices
     private List<List<Integer>> adjList;
@@ -43,7 +43,7 @@ public class SCCTarjans {
     private boolean[] inStack;
     private Stack<Integer> stack;
 
-    public SCCTarjans(int V) {
+    public A11SCCTarjans(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
@@ -56,7 +56,7 @@ public class SCCTarjans {
     }
 
     public static void main(String[] args) {
-        SCCTarjans g = new SCCTarjans(8);
+        A11SCCTarjans g = new A11SCCTarjans(8);
 
         g.addEdge(0, 1);
         g.addEdge(1, 2);

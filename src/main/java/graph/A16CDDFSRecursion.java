@@ -19,19 +19,19 @@ DFS Cycle Detection (Undirected Graph)
    - O(V + E)
 */
 
-public class CDDFSRecursion {
+public class A16CDDFSRecursion {
 
     private int V;
     private List<List<Integer>> adjList;
 
-    public CDDFSRecursion(int V) {
+    public A16CDDFSRecursion(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        CDDFSRecursion g = new CDDFSRecursion(4);
+        A16CDDFSRecursion g = new A16CDDFSRecursion(4);
         g.addEdge(0, 1);
         g.addEdge(1, 2);
         g.addEdge(2, 3);

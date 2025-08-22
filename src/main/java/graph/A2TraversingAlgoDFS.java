@@ -17,18 +17,18 @@ Applications in travel:
 - Detecting cycles
 - Planning routes in a maze*/
 
-public class TraversingAlgoDFS {
+public class A2TraversingAlgoDFS {
     private int V;
     private List<List<Integer>> adjList;
 
-    public TraversingAlgoDFS(int V) {
+    public A2TraversingAlgoDFS(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        TraversingAlgoDFS g = new TraversingAlgoDFS(6);
+        A2TraversingAlgoDFS g = new A2TraversingAlgoDFS(6);
         g.addEdge(0, 1);
         g.addEdge(0, 2);
         g.addEdge(1, 3);

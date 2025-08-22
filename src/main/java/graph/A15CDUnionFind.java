@@ -20,7 +20,7 @@ Union-Find Cycle Detection (Undirected Graph)
 */
 
 
-public class CDUnionFind {
+public class A15CDUnionFind {
 
     public static boolean hasCycle(int V, int[][] edges) {
         DisjointSet ds = new DisjointSet(V);

@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class MSTKruskal {
+public class A8MSTKruskal {
 
     public static void main(String[] args) {
         int V = 6; // number of vertices

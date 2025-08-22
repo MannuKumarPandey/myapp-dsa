@@ -25,7 +25,7 @@ Notes:
 */
 
 // A* Search Algorithm: One Source to One Target
-public class SPAAStarSearchOneSourceOneDestination {
+public class A6SPAAStarSearchOneSourceOneDestination {
 
     public static void main(String[] args) {
         int V = 6; // number of nodes

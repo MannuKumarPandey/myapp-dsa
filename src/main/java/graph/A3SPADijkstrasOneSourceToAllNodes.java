@@ -28,7 +28,7 @@ By default, Dijkstra sirf distances deta hai, path nahi.
 Agar shortest path bhi chahiye → parent array maintain karna padega.*/
 
 
-public class SPADijkstrasOneSourceToAllNodes {
+public class A3SPADijkstrasOneSourceToAllNodes {
     public static void main(String[] args) {
         // 5 nodes ka graph
         Graph1 g = new Graph1(5);

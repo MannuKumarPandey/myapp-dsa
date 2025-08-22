@@ -30,19 +30,19 @@ DFS based Topological Sorting ke key points:
 */
 
 
-public class TSDFS {
+public class A14TSDFS {
 
     private int V;
     private List<List<Integer>> adjList;
 
-    public TSDFS(int V) {
+    public A14TSDFS(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        TSDFS g = new TSDFS(6);
+        A14TSDFS g = new A14TSDFS(6);
 
         g.addEdge(5, 2);
         g.addEdge(5, 0);

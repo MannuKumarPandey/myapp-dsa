@@ -26,7 +26,7 @@ By default, ye algorithm sirf distance matrix deta hai.
 Agar actual path chahiye → ek parent matrix maintain karna padega aur update karte rehna hoga relaxation step me.*/
 
 
-public class SPAFloydWarshallAllNodestoAllNodes {
+public class A5SPAFloydWarshallAllNodestoAllNodes {
 
     public static void main(String[] args) {
         int V = 4; // number of vertices

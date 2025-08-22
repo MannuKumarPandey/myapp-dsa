@@ -15,7 +15,7 @@ Core Idea:
 4. Run Dijkstra from each vertex with reweighted edges.
 5. Convert distances back using original weights.
 */
-public class SPAJohnsonAllNodesToAllNodes {
+public class A7SPAJohnsonAllNodesToAllNodes {
 
     public static void main(String[] args) {
         int V = 5; // number of vertices

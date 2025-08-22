@@ -32,19 +32,19 @@ Kahn's Algorithm ke key points:
 */
 
 
-public class TSKahnsAlgorithm {
+public class A13TSKahnsAlgorithm {
 
     private int V; // number of vertices
     private List<List<Integer>> adjList;
 
-    public TSKahnsAlgorithm(int V) {
+    public A13TSKahnsAlgorithm(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        TSKahnsAlgorithm g = new TSKahnsAlgorithm(6);
+        A13TSKahnsAlgorithm g = new A13TSKahnsAlgorithm(6);
 
         g.addEdge(5, 2);
         g.addEdge(5, 0);

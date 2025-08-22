@@ -26,7 +26,7 @@ Prim’s Algorithm ke key points:
 
 import java.util.*;
 
-public class MSTPrims {
+public class A9MSTPrims {
 
     public static void main(String[] args) {
         int V = 5; // number of vertices

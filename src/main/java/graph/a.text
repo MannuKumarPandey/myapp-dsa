@@ -1,52 +1,49 @@
+===============================
+Travelling Algorithms
+================================
+A1)TraversingAlgoBFS
+A2) TraversingAlgoDFS
+
 =====================================
-1) SPA---> Shortest Path Algorithms
+SPA---> Shortest Path Algorithms
 ===================================
-SPADijkstrasOneSourceToAllNodes
-SPABellmanFordSingleSourceToAllNodes
-SPAFloydWarshallAllNodestoAllNodes
-SPAAStarSearchOneSourceOneDestination
-SPAJohnsonAllNodesToAllNodes
-
+A3) SPADijkstrasOneSourceToAllNodes
+A4) SPABellmanFordSingleSourceToAllNodes
+A5) SPAFloydWarshallAllNodestoAllNodes
+A6) SPAAStarSearchOneSourceOneDestination
+A7) SPAJohnsonAllNodesToAllNodes
 
 ===================================
-2) MST---> Minimum Spanning Tree
+MST---> Minimum Spanning Tree
 ====================================
-MSTKruskal
-MSTPrims
-
+A8) MSTKruskal
+A9) MSTPrims
 
 =========================================
-3) SCC---> Strongly Connected Components
+SCC---> Strongly Connected Components
 ==========================================
-SCCKosaraju
-SCCTarjans
+A10) SCCKosaraju
+A11) SCCTarjans
 
 =======================================
-4) Articulation Points & Bridges
+Articulation Points & Bridges
 ======================================
-ArticulationPointsBridgesTarjansAlgo
-
-
+A12) ArticulationPointsBridgesTarjansAlgo
 
 ================================
-5) TS----> Topological Sort
+TS----> Topological Sort
 ===============================
-TSKahnsAlgorithm
-TSDFS
-
+A13) TSKahnsAlgorithm
+A14) TSDFS
 
 =================================
-6) CD---> Cycle Detection
+CD---> Cycle Detection
 ===================================
-CDUnionFind
-CDDFSRecursion
+A15) CDUnionFind
+A16) CDDFSRecursion
 
 
-===============================
-7) Travelling Algorithms
-================================
-TraversingAlgoBFS
-TraversingAlgoDFS
+
 
 
 

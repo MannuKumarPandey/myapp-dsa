@@ -14,18 +14,18 @@ Key Idea:
 - Distance from source node is calculated layer by layer.
 - Guarantees shortest path (in terms of edges) for unweighted graphs.*/
 
-public class TraversingAlgoBFS {
+public class A1TraversingAlgoBFS {
     private int V;
     private List<List<Integer>> adjList;
 
-    public TraversingAlgoBFS(int V) {
+    public A1TraversingAlgoBFS(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        TraversingAlgoBFS g = new TraversingAlgoBFS(6);
+        A1TraversingAlgoBFS g = new A1TraversingAlgoBFS(6);
         g.addEdge(0, 1);
         g.addEdge(0, 2);
         g.addEdge(1, 3);

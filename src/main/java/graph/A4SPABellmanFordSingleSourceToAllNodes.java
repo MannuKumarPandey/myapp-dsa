@@ -32,7 +32,7 @@ By default, Bellman-Ford sirf distances deta hai, path nahi.
 Agar shortest path bhi chahiye → parent array maintain karna padega, har relaxation me parent update karenge.
 */
 
-public class SPABellmanFordSingleSourceToAllNodes {
+public class A4SPABellmanFordSingleSourceToAllNodes {
     public static void main(String[] args) {
         // 5 nodes ka graph
         GraphBF g = new GraphBF(5);

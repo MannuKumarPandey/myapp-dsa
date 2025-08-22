@@ -30,19 +30,19 @@ Kosaraju's Algorithm ke key points:
    - Transpose graph me DFS se SCC easily detect hota hai.
 */
 
-public class SCCKosaraju {
+public class A10SCCKosaraju {
 
     private int V;
     private List<List<Integer>> adjList;
 
-    public SCCKosaraju(int V) {
+    public A10SCCKosaraju(int V) {
         this.V = V;
         adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
     }
 
     public static void main(String[] args) {
-        SCCKosaraju g = new SCCKosaraju(8);
+        A10SCCKosaraju g = new A10SCCKosaraju(8);
 
         g.addEdge(0, 1);
         g.addEdge(1, 2);
