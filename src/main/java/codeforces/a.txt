@@ -1,0 +1,1 @@
+1) if we have x and we have to find y where x#(append)y must be divisible by (x+y) then x*2 would be the answer
